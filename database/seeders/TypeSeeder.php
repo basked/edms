@@ -1,11 +1,11 @@
 <?php
 
 namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
 
 class TypeSeeder extends Seeder
 {
+
     /**
      * Run the database seeds.
      *
@@ -13,6 +13,6 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Type::factory(10)->create();
     }
 }

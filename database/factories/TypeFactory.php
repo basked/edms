@@ -14,7 +14,8 @@ class TypeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=>$this->faker->name,
+            'is_active'=>$this->faker->boolean,
         ];
     }
 }
