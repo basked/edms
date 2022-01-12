@@ -19,6 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::resource('/types', \App\Http\Controllers\Api\TypeController::class);
+Route::resource('/types',  \App\Http\Controllers\Api\TypeController::class);
 Route::resource('/bases', \App\Http\Controllers\Api\BasController::class);
 

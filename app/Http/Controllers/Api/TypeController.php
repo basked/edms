@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreTypeRequest;
-use App\Http\Requests\UpdateTypeRequest;
+//use App\Http\Requests\StoreTypeRequest;
+//use App\Http\Requests\UpdateTypeRequest;
 use App\Models\Type;
+use phpDocumentor\Reflection\Types\This;
 
-class TypeController extends Controllers
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -48,8 +49,16 @@ class TypeController extends Controllers
      */
     public function show(Type $type)
     {
-        dd($type);
+
+        dd($type,
+            $type->getTable(),      $type->getOriginal(),
+
+            $type->getFillable(),
+            $type->getAttributes(),
+            $type->getOriginal(),
+        );
     }
+
 
     /**
      * Show the form for editing the specified resource.
