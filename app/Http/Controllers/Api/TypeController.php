@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreTypeRequest;
 use App\Http\Requests\UpdateTypeRequest;
 use App\Models\Type;
 
-class TypeController extends Controller
+class TypeController extends Controllers
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class TypeController extends Controller
      */
     public function index()
     {
-        //
+        dd('TypeController');
     }
 
     /**
@@ -47,7 +48,7 @@ class TypeController extends Controller
      */
     public function show(Type $type)
     {
-        //
+        dd($type);
     }
 
     /**

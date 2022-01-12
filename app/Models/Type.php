@@ -14,6 +14,5 @@ class Type extends Model
     public function setShortNameAttribute($value)
     {
         $this->attributes['short_name'] = strtoupper($value);
-
     }
 }
