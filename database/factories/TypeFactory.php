@@ -15,6 +15,7 @@ class TypeFactory extends Factory
     {
         return [
             'name'=>$this->faker->name,
+            'short_name'=>$this->faker->name,
             'is_active'=>$this->faker->boolean,
         ];
     }
