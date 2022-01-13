@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Solid\O\webmyself;
 
-class FileSave implements Saver
+class FileSaver implements Saver
 {
     private $filePath;
 

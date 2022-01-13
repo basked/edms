@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Solid\O\webmyself\DBSaver;
-use App\Http\Controllers\Solid\O\webmyself\FileSave;
+use App\Http\Controllers\Solid\O\webmyself\FileSaver;
 use App\Http\Controllers\Solid\O\webmyself\ReportRepository;
 use App\Http\Controllers\Solid\O\webmyself\Saver;
 use App\Http\Controllers\Solid\S\webmyself\HTMLTemplate;
@@ -43,7 +43,7 @@ class BasController extends Controller
             {
                 $reportData = (new ReportData())->getPrepareData();
                 $reportHtml = new Report($reportData, (new PhpTemplate()));
-//                $saver = new FileSave(__DIR__ . '/report.html');
+                $saver = new FileSaver(__DIR__ . '/report.html');
                 $saver = new DBSaver();
                 $rp = new  ReportRepository($reportHtml, $saver );
                 $rp->save($reportData);
