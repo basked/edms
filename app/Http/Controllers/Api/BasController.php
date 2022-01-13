@@ -29,8 +29,8 @@ class BasController extends Controller
         switch ($x) {
             case 's':
             {
-//                 $reportData = []; //Если данных нет вывести сообщение и ошибку 404
-                $reportData = (new ReportData())->getPrepareData();
+                //                  $reportData = []; //Если данных нет вывести сообщение и ошибку 404
+               $reportData = (new ReportData())->getPrepareData();
                 $templateHtml = new HTMLTemplate();
                 $templatePhp = new PhpTemplate();
                 $reportHtml = new Report($reportData, $templateHtml);
@@ -44,7 +44,7 @@ class BasController extends Controller
                 $reportData = (new ReportData())->getPrepareData();
                 $reportHtml = new Report($reportData, (new PhpTemplate()));
                 $saver = new FileSaver(__DIR__ . '/report.html');
-                $saver = new DBSaver((new \App\Models\Report()));
+//                $saver = new DBSaver((new \App\Models\Report()));
                 $rp = new  ReportRepository($reportHtml, $saver );
                 $rp->save($reportData);
                 break;

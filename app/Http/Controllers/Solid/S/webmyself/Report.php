@@ -5,12 +5,12 @@ namespace App\Http\Controllers\Solid\S\webmyself;
 class Report
 {
     private array $repData;
-    private Template $template;
+    private View $view;
 
-    public function __construct(array $repData, Template $template)
+    public function __construct(array $repData, View $view)
     {
         $this->repData = $repData;
-        $this->template = $template;
+        $this->view = $view;
     }
 
     private function validateData()
@@ -25,7 +25,7 @@ class Report
     public function showReport()
     {
         if ($this->validateData()) {
-            $this->template->render($this->repData);
+            $this->view->render($this->repData);
         }
     }
 

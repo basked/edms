@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Solid\S\webmyself;
 
-class HTMLTemplate implements Template
+class HTMLTemplate implements View
 {
     function render($data)
     {
