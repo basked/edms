@@ -1,14 +1,14 @@
 <?php
 
+
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreTypeRequest;
-use App\Http\Requests\UpdateTypeRequest;
-use App\Models\Type;
-use phpDocumentor\Reflection\Types\This;
+use App\Http\Requests\StoreReportRequest;
+use App\Http\Requests\UpdateReportRequest;
+use App\Models\Report;
 
-class TypeController extends Controller
+class ReportController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class TypeController extends Controller
      */
     public function index()
     {
-        dd('TypeController');
+
     }
 
     /**
@@ -33,10 +33,10 @@ class TypeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \App\Http\Requests\StoreTypeRequest $request
+     * @param  \App\Http\Requests\StoreReportRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTypeRequest $request)
+    public function store(StoreReportRequest $request)
     {
         //
     }
@@ -44,28 +44,21 @@ class TypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param \App\Models\Type $type
+     * @param  \App\Models\Report  $report
      * @return \Illuminate\Http\Response
      */
-    public function show(Type $type)
+    public function show(Report $report)
     {
-
-        dd($type,
-            $type->getTable(), $type->getOriginal(),
-            $type->getFillable(),
-            $type->getAttributes(),
-            $type->getOriginal(),
-        );
+        //
     }
-
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Models\Type $type
+     * @param  \App\Models\Report  $report
      * @return \Illuminate\Http\Response
      */
-    public function edit(Type $type)
+    public function edit(Report $report)
     {
         //
     }
@@ -73,11 +66,11 @@ class TypeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \App\Http\Requests\UpdateTypeRequest $request
-     * @param \App\Models\Type $type
+     * @param  \App\Http\Requests\UpdateReportRequest  $request
+     * @param  \App\Models\Report  $report
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTypeRequest $request, Type $type)
+    public function update(UpdateReportRequest $request, Report $report)
     {
         //
     }
@@ -85,10 +78,10 @@ class TypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\Type $type
+     * @param  \App\Models\Report  $report
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Type $type)
+    public function destroy(Report $report)
     {
         //
     }
