@@ -1,7 +1,8 @@
 <?php
+ declare(strict_types=1);
+namespace App\Http\Controllers\Api;
 
-namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreStaffRequest;
 use App\Http\Requests\UpdateStaffRequest;
 use App\Models\Staff;
@@ -15,7 +16,18 @@ class StaffController extends Controller
      */
     public function index()
     {
-        //
+        $array = array(
+            1    => "a",
+            "1"  => "b",
+            1.5  => "c",
+            true => "d",
+        );
+
+
+         $a1=array('1','2','3');
+         $a2=['1','2','3'];
+         dd($array, $a1, $a2);
+         return $k;
     }
 
     /**
