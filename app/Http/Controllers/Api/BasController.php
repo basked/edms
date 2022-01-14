@@ -44,7 +44,7 @@ class BasController extends Controller
                 $reportData = (new ReportData())->getPrepareData();
                 $reportHtml = new Report($reportData, (new PhpTemplate()));
 //                    $saver = new FileSaver(__DIR__ . '/report.html');
-            $saver = new DBSaver((new \App\Models\Report()));
+                $saver = new DBSaver((new \App\Models\Report()));
                 $rp = new  ReportRepository($reportHtml, $saver );
                 $rp->save($reportData);
                 break;

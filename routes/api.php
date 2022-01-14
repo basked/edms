@@ -22,6 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/test',  function(){
     dd(123);
 });
+Route::apiResource('/courses',  \App\Http\Controllers\Api\CoursesController::class);
+
 Route::resource('/types',  \App\Http\Controllers\Api\TypeController::class);
 Route::resource('/bases', \App\Http\Controllers\Api\BasController::class);
 Route::resource('/tests', \App\Http\Controllers\Api\TestController::class);
